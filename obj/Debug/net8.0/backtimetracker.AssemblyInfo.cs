@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backtimetracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bec81073048e1909978707796031da6ee7d906c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93b6c5980256625821901cb997c550a6d83a2e77")]
 [assembly: System.Reflection.AssemblyProductAttribute("backtimetracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backtimetracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

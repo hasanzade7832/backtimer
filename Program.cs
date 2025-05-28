@@ -1,4 +1,5 @@
-﻿using backtimetracker.Data;
+﻿using System.Text.Json.Serialization;
+using backtimetracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -23,6 +24,14 @@ builder.Services.AddSwaggerGen(cfg =>
 // اتصال به SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(opts =>
+    {
+        opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
+
 
 // CORS برای کلاینت Vite
 const string FrontPolicy = "Front";

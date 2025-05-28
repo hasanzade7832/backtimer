@@ -83,6 +83,90 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "YourAppNamespace.Controllers.InternetController",
+    "Method": "AddDownload",
+    "RelativePath": "api/Internet/AddDownload/{purchaseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "backtimetracker.Models.Download",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourAppNamespace.Controllers.InternetController",
+    "Method": "AddPurchase",
+    "RelativePath": "api/Internet/AddPurchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "backtimetracker.Models.Purchase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourAppNamespace.Controllers.InternetController",
+    "Method": "GetAllPurchases",
+    "RelativePath": "api/Internet/All",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourAppNamespace.Controllers.InternetController",
+    "Method": "DeletePurchase",
+    "RelativePath": "api/Internet/DeletePurchase/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourAppNamespace.Controllers.InternetController",
+    "Method": "EditPurchase",
+    "RelativePath": "api/Internet/EditPurchase/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "backtimetracker.Models.Purchase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
     "Method": "Get",
     "RelativePath": "api/TimeRecords",

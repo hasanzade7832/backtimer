@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backtimetracker.Data;
 
@@ -10,9 +11,11 @@ using backtimetracker.Data;
 namespace backtimetracker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250528204919_AddPurchaseAndDownloadTable")]
+    partial class AddPurchaseAndDownloadTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,6 +23,61 @@ namespace backtimetracker.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Download", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PurchaseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Volume")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PurchaseId");
+
+                    b.ToTable("Downloads");
+                });
+
+            modelBuilder.Entity("Purchase", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RemainingVolume")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalVolume")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Purchases");
+                });
 
             modelBuilder.Entity("TrackerAPI.Models.TimeRecord", b =>
                 {
@@ -70,63 +128,9 @@ namespace backtimetracker.Migrations
                     b.ToTable("Activities");
                 });
 
-            modelBuilder.Entity("backtimetracker.Models.Download", b =>
+            modelBuilder.Entity("Download", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Desc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PurchaseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Volume")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PurchaseId");
-
-                    b.ToTable("Downloads");
-                });
-
-            modelBuilder.Entity("backtimetracker.Models.Purchase", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RemainingVolume")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TotalVolume")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Purchases");
-                });
-
-            modelBuilder.Entity("backtimetracker.Models.Download", b =>
-                {
-                    b.HasOne("backtimetracker.Models.Purchase", "Purchase")
+                    b.HasOne("Purchase", "Purchase")
                         .WithMany("Downloads")
                         .HasForeignKey("PurchaseId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -135,7 +139,7 @@ namespace backtimetracker.Migrations
                     b.Navigation("Purchase");
                 });
 
-            modelBuilder.Entity("backtimetracker.Models.Purchase", b =>
+            modelBuilder.Entity("Purchase", b =>
                 {
                     b.Navigation("Downloads");
                 });

@@ -13,5 +13,9 @@ namespace backtimetracker.Data
 
         public DbSet<TimeRecord> TimeRecords { get; set; }
 
+        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<Download> Downloads { get; set; }
+
+
     }
 }
