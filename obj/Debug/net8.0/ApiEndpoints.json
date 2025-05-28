@@ -83,6 +83,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
+    "Method": "Get",
+    "RelativePath": "api/TimeRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
+    "Method": "Post",
+    "RelativePath": "api/TimeRecords",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "record",
+        "Type": "TrackerAPI.Models.TimeRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
+    "Method": "GetById",
+    "RelativePath": "api/TimeRecords/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
+    "Method": "Delete",
+    "RelativePath": "api/TimeRecords/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrackerAPI.Controllers.TimeRecordsController",
+    "Method": "GetByActivity",
+    "RelativePath": "api/TimeRecords/ByActivity/{activityId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backtimetracker.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

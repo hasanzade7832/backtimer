@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using backtimetracker.Models;
+using TrackerAPI.Models;
 
 namespace backtimetracker.Data
 {
@@ -9,5 +10,8 @@ namespace backtimetracker.Data
             : base(options) { }
 
         public DbSet<Activity> Activities { get; set; }
+
+        public DbSet<TimeRecord> TimeRecords { get; set; }
+
     }
 }

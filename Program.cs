@@ -1,20 +1,44 @@
 ﻿using backtimetracker.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+/*────────────────────  Services  ────────────────────*/
 
-// اتصال به دیتابیس
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// کنترلرها
+builder.Services.AddControllers();
+
+// Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(cfg =>
+{
+    cfg.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "BackTimeTracker API",
+        Version = "v1"
+    });
+});
+
+// اتصال به SQL Server
+builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// CORS برای کلاینت Vite
+const string FrontPolicy = "Front";
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(FrontPolicy, p =>
+        p.WithOrigins("http://localhost:5173")   // آدرس فرانت‌اِند
+         .AllowAnyHeader()
+         .AllowAnyMethod());
+});
 
 var app = builder.Build();
 
-// Swagger UI
+/*───────────────────  Middleware  ───────────────────*/
+
+// Swagger UI فقط در حالت Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,6 +46,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(FrontPolicy);
+
 app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();

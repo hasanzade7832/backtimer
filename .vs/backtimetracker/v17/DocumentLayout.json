@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\timerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\timerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\timerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\timerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\source\\repos\\backtimetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\migrations\\20250528185912_initactivities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:migrations\\20250528185912_initactivities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,85 +46,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAEYBAAAAAAAAAADwv2ABAAADAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-05-28T15:12:44.76Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "TimeRecordsController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\TimeRecordsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TimeRecordsController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\TimeRecordsController.cs",
+              "RelativeToolTip": "Controllers\\TimeRecordsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:09:04.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActivitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Controllers\\ActivitiesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ActivitiesController.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Controllers\\ActivitiesController.cs",
-              "RelativeToolTip": "Controllers\\ActivitiesController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwEcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TimeRecord.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\TimeRecord.cs",
+              "RelativeDocumentMoniker": "Models\\TimeRecord.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\TimeRecord.cs",
+              "RelativeToolTip": "Models\\TimeRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:55:15.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T19:03:10.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250528185912_InitActivities.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250528185912_InitActivities.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250528185912_InitActivities.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250528185912_InitActivities.cs",
+              "RelativeToolTip": "Migrations\\20250528185912_InitActivities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T18:59:13.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAEYBAAAAAAAAAADwv2ABAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-28T15:12:44.76Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-28T14:51:17.721Z",
-              "EditorCaption": ""
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ActivitiesController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\ActivitiesController.cs",
+              "RelativeToolTip": "Controllers\\ActivitiesController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwEcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:55:15.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-28T14:51:17.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAADcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T14:49:45.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:49:08.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T14:49:08.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Activity.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Models\\Activity.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Activity.cs",
               "RelativeDocumentMoniker": "Models\\Activity.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\source\\repos\\backtimetracker\\Models\\Activity.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Activity.cs",
               "RelativeToolTip": "Models\\Activity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:42:08.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T14:42:08.59Z"
             }
           ]
         }
