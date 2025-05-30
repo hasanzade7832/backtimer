@@ -1,68 +1,72 @@
-﻿using backtimetracker.Data;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TrackerAPI.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using backtimetracker.Data;
+using backtimetracker.Models;
 
-namespace TrackerAPI.Controllers
+namespace backtimetracker.Controllers;
+
+[Authorize]
+[ApiController]
+[Route("api/[controller]")]
+public class TimeRecordsController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class TimeRecordsController : ControllerBase
+    private readonly ApplicationDbContext _context;
+
+    public TimeRecordsController(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public TimeRecordsController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+    [HttpGet]
+    public IActionResult Get()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var records = _context.TimeRecords.Where(r => r.UserId == userId).ToList();
+        return Ok(records);
+    }
 
-        // GET: api/TimeRecords
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok(_context.TimeRecords.ToList());
-        }
+    [HttpGet("{id}")]
+    public IActionResult GetById(int id)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var record = _context.TimeRecords.FirstOrDefault(r => r.Id == id && r.UserId == userId);
+        if (record == null)
+            return NotFound();
+        return Ok(record);
+    }
 
-        // GET: api/TimeRecords/5
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            var record = _context.TimeRecords.Find(id);
-            if (record == null)
-                return NotFound();
-            return Ok(record);
-        }
+    [HttpGet("ByActivity/{activityId}")]
+    public IActionResult GetByActivity(int activityId)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var records = _context.TimeRecords
+            .Where(r => r.ActivityId == activityId && r.UserId == userId)
+            .OrderByDescending(r => r.Id)
+            .ToList();
+        return Ok(records);
+    }
 
-        // GET: api/TimeRecords/ByActivity/3
-        [HttpGet("ByActivity/{activityId}")]
-        public IActionResult GetByActivity(int activityId)
-        {
-            var records = _context.TimeRecords
-                .Where(r => r.ActivityId == activityId)
-                .OrderByDescending(r => r.Id)
-                .ToList();
-            return Ok(records);
-        }
+    [HttpPost]
+    public IActionResult Post(TimeRecord record)
+    {
+        record.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        _context.TimeRecords.Add(record);
+        _context.SaveChanges();
+        return CreatedAtAction(nameof(GetById), new { id = record.Id }, record);
+    }
 
-        // POST: api/TimeRecords
-        [HttpPost]
-        public IActionResult Post(TimeRecord record)
-        {
-            _context.TimeRecords.Add(record);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetById), new { id = record.Id }, record);
-        }
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var record = _context.TimeRecords.FirstOrDefault(r => r.Id == id && r.UserId == userId);
+        if (record == null)
+            return NotFound();
 
-        // DELETE: api/TimeRecords/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var record = _context.TimeRecords.Find(id);
-            if (record == null)
-                return NotFound();
-
-            _context.TimeRecords.Remove(record);
-            _context.SaveChanges();
-            return NoContent();
-        }
+        _context.TimeRecords.Remove(record);
+        _context.SaveChanges();
+        return NoContent();
     }
 }
