@@ -28,8 +28,14 @@ public class ActivitiesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Activity>> CreateActivity(Activity activity)
     {
+
         var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-        activity.UserId = userId ?? string.Empty;
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized("کاربر معتبر نیست");
+        }
+
+        activity.UserId = userId;
         activity.User = null;
 
         _context.Activities.Add(activity);
@@ -41,10 +47,15 @@ public class ActivitiesController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateActivity(int id, Activity activity)
     {
-        if (id != activity.Id) return BadRequest();
+        if (id != activity.Id) return BadRequest("شناسه فعالیت نامعتبر است");
 
         var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-        activity.UserId = userId ?? string.Empty;
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized("کاربر معتبر نیست");
+        }
+
+        activity.UserId = userId;
         activity.User = null;
 
         _context.Entry(activity).State = EntityState.Modified;

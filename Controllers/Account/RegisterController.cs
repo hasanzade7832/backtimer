@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace backtimetracker.Controllers.Account;
 
 [AllowAnonymous]
-[Route("api/[controller]")]
+[Route("api/Register")]
 [ApiController]
 public class RegisterController : ControllerBase
 {
@@ -18,7 +18,7 @@ public class RegisterController : ControllerBase
         _userManager = userManager;
     }
 
-    [HttpPost("Register")]
+    [HttpPost]
     public async Task<IActionResult> Register([FromBody] RegisterDto dto)
     {
         if (!ModelState.IsValid)

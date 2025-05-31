@@ -164,7 +164,29 @@
         }
       }
     },
-    "/api/Admin/PromoteToAdmin/{id}": {
+    "/api/Admin/UserDetails/{id}": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/Promote/{id}": {
       "put": {
         "tags": [
           "Admin"
@@ -358,7 +380,7 @@
         }
       }
     },
-    "/api/Login/Login": {
+    "/api/login": {
       "post": {
         "tags": [
           "Login"
@@ -389,7 +411,7 @@
         }
       }
     },
-    "/api/Register/Register": {
+    "/api/Register": {
       "post": {
         "tags": [
           "Register"

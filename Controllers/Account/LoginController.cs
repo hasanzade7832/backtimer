@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 namespace backtimetracker.Controllers.Account
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/login")]
     public class LoginController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -24,7 +24,7 @@ namespace backtimetracker.Controllers.Account
             _configuration = configuration;
         }
 
-        [HttpPost("Login")]
+        [HttpPost]
         public async Task<IActionResult> Login([FromBody] Login model)
         {
             if (string.IsNullOrWhiteSpace(model.UserName) || string.IsNullOrWhiteSpace(model.Password))

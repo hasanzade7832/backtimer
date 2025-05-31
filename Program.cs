@@ -11,28 +11,29 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 📦 اتصال به دیتابیس
+/*────────────────── 1) Database ──────────────────*/
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 🔐 Identity
+/*────────────────── 2) Identity ───────────────────*/
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+    .AddDefaultTokenProviders();   // ← شامل RoleManager هم می‌شود
 
-// 🔐 JWT Authentication
-builder.Services.AddAuthentication(options =>
+/*────────────────── 3) JWT Auth ───────────────────*/
+builder.Services.AddAuthentication(opt =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-.AddJwtBearer(options =>
+.AddJwtBearer(opt =>
 {
     var key = builder.Configuration["Jwt:Key"];
     var issuer = builder.Configuration["Jwt:Issuer"];
     var audience = builder.Configuration["Jwt:Audience"];
 
-    options.TokenValidationParameters = new TokenValidationParameters
+    opt.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
@@ -44,15 +45,19 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// 🔄 Json Loop Handling
-builder.Services
-    .AddControllers()
-    .AddJsonOptions(opts =>
-    {
-        opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-    });
+/*────────────────── 4) Authorization ─────────────*/
+builder.Services.AddAuthorization(opts =>
+{
+    // سیاست اختیاری؛ Attribute هم کفایت می‌کند
+    opts.AddPolicy("Admin", p => p.RequireRole("Admin"));
+});
 
-// 🧪 Swagger + Authorization Header
+/*────────────────── 5) Controllers / JSON ─────────*/
+builder.Services.AddControllers()
+    .AddJsonOptions(o =>
+        o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+/*────────────────── 6) Swagger ───────────────────*/
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(cfg =>
 {
@@ -73,36 +78,40 @@ builder.Services.AddSwaggerGen(cfg =>
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id   = "Bearer"
+                }
             },
             Array.Empty<string>()
         }
     });
 });
 
-// 🌐 CORS برای React
+/*────────────────── 7) CORS برای React ────────────*/
 const string FrontPolicy = "Front";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(FrontPolicy, policy =>
-        policy.WithOrigins("http://localhost:5173")
-              .AllowAnyHeader()
-              .AllowAnyMethod());
+    options.AddPolicy(FrontPolicy, p =>
+        p.WithOrigins("http://localhost:5173")
+         .AllowAnyHeader()
+         .AllowAnyMethod());
 });
 
-// 🛠 خدمات سفارشی
+/*────────────────── 8) Services & DI ─────────────*/
 builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
 
-// 🧑‍💻 ساخت ادمین اولیه
+/*───── 9) ایجاد نقش‌ها / ادمین اولیه (یک‌بار در استارت) ─────*/
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     await RoleInitializer.InitializeAsync(services);
 }
 
-// 🧪 Swagger فقط در محیط توسعه
+/*────────────────── 10) Middleware pipeline ──────*/
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -111,8 +120,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors(FrontPolicy);
-app.UseAuthentication(); // ← قبل از Authorization
+app.UseAuthentication();   // ← قبل از UseAuthorization
 app.UseAuthorization();
-app.MapControllers();
 
+app.MapControllers();
 app.Run();
