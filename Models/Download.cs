@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using backtimetracker.Models;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace backtimetracker.Models;
+using System.ComponentModel.DataAnnotations;
 
 public class Download
 {
@@ -12,7 +11,7 @@ public class Download
 
     public string? Desc { get; set; }
 
-    public string Time { get; set; } = "";
+    public string Date { get; set; } = "";   // 👈 فقط این
 
     [ForeignKey("Purchase")]
     public int PurchaseId { get; set; }

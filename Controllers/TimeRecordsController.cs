@@ -69,4 +69,31 @@ public class TimeRecordsController : ControllerBase
         _context.SaveChanges();
         return NoContent();
     }
+
+    // ───────────────────────────────────────────
+    // PUT: /api/TimeRecords/{id}
+    // ───────────────────────────────────────────
+    [HttpPut("{id}")]
+    public IActionResult Put(int id, [FromBody] TimeRecord model)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        // رکوردِ موردنظر کاربر را پیدا کن
+        var record = _context.TimeRecords
+                             .FirstOrDefault(r => r.Id == id && r.UserId == userId);
+        if (record is null)
+            return NotFound("رکورد یافت نشد");
+
+        // به‌روزرسانی فیلدها
+        record.Title = model.Title;
+        record.Duration = model.Duration;
+        record.Date = model.Date;   // اگر نمی‌خواهی ویرایش شود، این خط را حذف کن
+        record.Time = model.Time;   // همین‌طور
+        record.ActivityId = model.ActivityId; // معمولاً تغییر نمی‌کند؛ اگر نمی‌خواهی قابل‌تغییر باشد، حذف کن
+
+        _context.SaveChanges();
+
+        return Ok(record);   // رکوردِ به‌روز‌شده را برمی‌گردانیم
+    }
+
 }

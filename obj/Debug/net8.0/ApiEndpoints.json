@@ -47,6 +47,22 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.ActivitiesController",
+    "Method": "DeleteActivity",
+    "RelativePath": "api/Activities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
     "Method": "UpdateActivity",
     "RelativePath": "api/Activities/{id}",
     "HttpMethod": "PUT",
@@ -67,16 +83,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
-    "Method": "DeleteActivity",
-    "RelativePath": "api/Activities/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "backtimetracker.Controllers.Account.AdminController",
+    "Method": "AddUser",
+    "RelativePath": "api/Admin/AddUser",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "model",
+        "Type": "AddUserDto",
         "IsRequired": true
       }
     ],
@@ -126,6 +142,27 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Account.AdminController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Admin/UpdateUser/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "backtimetracker.Models.ApplicationUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Account.AdminController",
     "Method": "GetUserDetails",
     "RelativePath": "api/Admin/UserDetails/{id}",
     "HttpMethod": "GET",
@@ -155,7 +192,7 @@
       },
       {
         "Name": "model",
-        "Type": "backtimetracker.Models.Download",
+        "Type": "Download",
         "IsRequired": true
       }
     ],
@@ -309,6 +346,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "Method": "Put",
+    "RelativePath": "api/TimeRecords/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "backtimetracker.Models.TimeRecord",
         "IsRequired": true
       }
     ],

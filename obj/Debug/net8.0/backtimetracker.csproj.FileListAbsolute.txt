@@ -314,3 +314,4 @@ C:\Users\ASUS\Desktop\timetracker\back\obj\Debug\net8.0\ref\backtimetracker.dll
 C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\ASUS\Desktop\timetracker\back\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\TimeZoneConverter.dll

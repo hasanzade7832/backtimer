@@ -13,6 +13,8 @@ public class Activity
 
     public string UserId { get; set; } = string.Empty;
 
+    public int TotalSeconds { get; set; } = 0; 
+
     [ForeignKey("UserId")]
     [JsonIgnore]
     public ApplicationUser? User { get; set; }

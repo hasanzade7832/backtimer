@@ -75,6 +75,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[8.1.2, )"
+            },
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

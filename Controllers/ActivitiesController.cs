@@ -25,10 +25,22 @@ public class ActivitiesController : ControllerBase
         return await _context.Activities.Where(a => a.UserId == userId).ToListAsync();
     }
 
+
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteActivity(int id)
+    {
+        var activity = await _context.Activities.FindAsync(id);
+        if (activity == null) return NotFound();
+
+        _context.Activities.Remove(activity);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+
     [HttpPost]
     public async Task<ActionResult<Activity>> CreateActivity(Activity activity)
     {
-
         var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
         if (string.IsNullOrEmpty(userId))
         {
@@ -37,6 +49,9 @@ public class ActivitiesController : ControllerBase
 
         activity.UserId = userId;
         activity.User = null;
+
+        // اگر از فرانت مقدار totalSeconds فرستاده شده، استفاده کن، اگر نه مقدار صفر باشد.
+        if (activity.TotalSeconds < 0) activity.TotalSeconds = 0;
 
         _context.Activities.Add(activity);
         await _context.SaveChangesAsync();
@@ -55,23 +70,16 @@ public class ActivitiesController : ControllerBase
             return Unauthorized("کاربر معتبر نیست");
         }
 
-        activity.UserId = userId;
-        activity.User = null;
+        // رکورد اصلی را بگیر تا totalSeconds را هم بتوانی درست بروزرسانی کنی
+        var entity = await _context.Activities.FirstOrDefaultAsync(a => a.Id == id && a.UserId == userId);
+        if (entity == null) return NotFound();
 
-        _context.Entry(activity).State = EntityState.Modified;
+        entity.Title = activity.Title;
+        entity.TotalSeconds = activity.TotalSeconds; // ← ← این خط مهم است
+
         await _context.SaveChangesAsync();
 
         return NoContent();
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteActivity(int id)
-    {
-        var activity = await _context.Activities.FindAsync(id);
-        if (activity == null) return NotFound();
-
-        _context.Activities.Remove(activity);
-        await _context.SaveChangesAsync();
-        return NoContent();
-    }
 }

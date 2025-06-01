@@ -5,6 +5,7 @@ using System.Security.Claims;
 using backtimetracker.Data;
 using backtimetracker.Models;
 
+
 namespace backtimetracker.Controllers;
 
 [Authorize]
@@ -86,7 +87,8 @@ public class InternetController : ControllerBase
         if (purchase.RemainingVolume < model.Volume)
             return BadRequest("حجم کافی نیست.");
 
-        model.Time = DateTime.Now.ToString("HH:mm:ss");
+        model.Date = DateTime.Now.ToString("yyyy-MM-dd");   // 👈 فقط تاریخ و بدون ساعت
+
         model.PurchaseId = purchaseId;
         purchase.RemainingVolume -= model.Volume;
         purchase.Downloads.Add(model);
@@ -94,4 +96,6 @@ public class InternetController : ControllerBase
         await _context.SaveChangesAsync();
         return Ok(model);
     }
+
+
 }

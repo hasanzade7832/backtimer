@@ -31,7 +31,8 @@ public class AdminController : ControllerBase
     public async Task<IActionResult> GetAllUsers()
     {
         var users = await _userManager.Users
-            .Select(u => new {
+            .Select(u => new
+            {
                 u.Id,
                 u.UserName,
                 u.FullName,
@@ -55,7 +56,8 @@ public class AdminController : ControllerBase
         // ✔️ مشخصات پایه کاربر
         var user = await _userManager.Users
             .Where(u => u.Id == id)
-            .Select(u => new {
+            .Select(u => new
+            {
                 u.Id,
                 u.UserName,
                 u.FullName,
@@ -129,4 +131,62 @@ public class AdminController : ControllerBase
         await _userManager.DeleteAsync(user);
         return Ok("کاربر حذف شد");
     }
+
+    // ───────────────────────────────────────────────
+    // 5. افزودن کاربر جدید
+    // POST: /api/Admin/AddUser
+    // ───────────────────────────────────────────────
+    [HttpPost("AddUser")]
+    public async Task<IActionResult> AddUser([FromBody] AddUserDto model)
+    {
+        if (string.IsNullOrWhiteSpace(model.UserName) || string.IsNullOrWhiteSpace(model.Password))
+            return BadRequest("نام کاربری و رمز عبور الزامی است.");
+
+        // چک یکتا بودن نام کاربری
+        if (await _userManager.FindByNameAsync(model.UserName) != null)
+            return BadRequest("نام کاربری تکراری است.");
+
+        var user = new ApplicationUser
+        {
+            UserName = model.UserName,
+            FullName = model.FullName,
+            Email = model.Email,
+            PhoneNumber = model.PhoneNumber,
+            Role = model.Role ?? "User",
+            CreatedAt = DateTime.Now
+        };
+
+        var result = await _userManager.CreateAsync(user, model.Password);
+
+        if (!result.Succeeded)
+            return BadRequest(result.Errors.Select(e => e.Description).ToList());
+
+        return Ok("کاربر با موفقیت افزوده شد");
+    }
+
+
+    // ───────────────────────────────────────────────
+    // 6. ویرایش کاربر
+    // PUT: /api/Admin/UpdateUser/{id}
+    // ───────────────────────────────────────────────
+    [HttpPut("UpdateUser/{id}")]
+    public async Task<IActionResult> UpdateUser(string id, [FromBody] ApplicationUser model)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+        if (user is null) return NotFound("کاربر یافت نشد");
+
+        // به‌روزرسانی اطلاعات
+        user.FullName = model.FullName;
+        user.Email = model.Email;
+        user.PhoneNumber = model.PhoneNumber;
+        user.Role = model.Role ?? user.Role;
+
+        var result = await _userManager.UpdateAsync(user);
+
+        if (!result.Succeeded)
+            return BadRequest(result.Errors.Select(e => e.Description).ToList());
+
+        return Ok("اطلاعات کاربر به‌روزرسانی شد");
+    }
+
 }
