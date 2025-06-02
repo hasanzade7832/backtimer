@@ -1,20 +1,18 @@
-﻿using backtimetracker.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
 
-public class Download
+namespace backtimetracker.Models
 {
-    public int Id { get; set; }
+    public class Download
+    {
+        public int Id { get; set; }
 
-    [Required]
-    public int Volume { get; set; }
+        public int PurchaseId { get; set; }
+        public Purchase? Purchase { get; set; }
 
-    public string? Desc { get; set; }
+        public int Volume { get; set; }
 
-    public string Date { get; set; } = "";   // 👈 فقط این
+        public string? Desc { get; set; }
 
-    [ForeignKey("Purchase")]
-    public int PurchaseId { get; set; }
-
-    public Purchase? Purchase { get; set; }
+        public string? Date { get; set; }
+    }
 }

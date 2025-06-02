@@ -1,28 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
+﻿// backtimetracker/Models/Purchase.cs
+using System;
+using System.Collections.Generic;
 
-namespace backtimetracker.Models;
-
-public class Purchase
+namespace backtimetracker.Models
 {
-    public int Id { get; set; }
+    public class Purchase
+    {
+        public int Id { get; set; }
+        public string? UserId { get; set; }
 
-    [Required]
-    public int Amount { get; set; }
+        public int Amount { get; set; }
 
-    [Required]
-    public int TotalVolume { get; set; }
+        public int TotalVolume { get; set; }
 
-    public int RemainingVolume { get; set; }
+        public int RemainingVolume { get; set; }
 
-    public string Date { get; set; } = string.Empty;
+        public string? Date { get; set; }
 
-    public string UserId { get; set; } = string.Empty;
-
-    [ForeignKey("UserId")]
-    [JsonIgnore]
-    public ApplicationUser? User { get; set; }
-
-    public List<Download> Downloads { get; set; } = new();
+        public List<Download> Downloads { get; set; } = new List<Download>();
+    }
 }

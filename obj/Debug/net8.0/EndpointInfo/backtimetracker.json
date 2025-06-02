@@ -494,6 +494,29 @@
         }
       }
     },
+    "/api/Internet/DeleteDownload/{id}": {
+      "delete": {
+        "tags": [
+          "Internet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/login": {
       "post": {
         "tags": [
@@ -878,14 +901,18 @@
         "additionalProperties": false
       },
       "Download": {
-        "required": [
-          "volume"
-        ],
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "purchaseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purchase": {
+            "$ref": "#/components/schemas/Purchase"
           },
           "volume": {
             "type": "integer",
@@ -898,13 +925,6 @@
           "date": {
             "type": "string",
             "nullable": true
-          },
-          "purchaseId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "purchase": {
-            "$ref": "#/components/schemas/Purchase"
           }
         },
         "additionalProperties": false
@@ -924,15 +944,15 @@
         "additionalProperties": false
       },
       "Purchase": {
-        "required": [
-          "amount",
-          "totalVolume"
-        ],
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
           },
           "amount": {
             "type": "integer",
@@ -947,10 +967,6 @@
             "format": "int32"
           },
           "date": {
-            "type": "string",
-            "nullable": true
-          },
-          "userId": {
             "type": "string",
             "nullable": true
           },
