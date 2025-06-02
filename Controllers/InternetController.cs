@@ -97,5 +97,35 @@ public class InternetController : ControllerBase
         return Ok(model);
     }
 
+    // ─────────── ویرایش دانلود ───────────
+    [HttpPut("EditDownload/{id}")]
+    public async Task<IActionResult> EditDownload(int id, [FromBody] Download editedDownload)
+    {
+        // ابتدا رکورد دانلودِ مربوطه را از دیتابیس بخوانیم
+        var download = await _context.Downloads
+            .Include(d => d.Purchase) // در صورت نیاز به اطلاعات والد
+            .FirstOrDefaultAsync(d => d.Id == id && d.Purchase.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier));
 
+        if (download == null)
+            return NotFound(new { Message = $"Download با شناسهٔ {id} پیدا نشد." });
+
+        // فرض می‌کنیم فیلدهای قابل ویرایش فقط حجم دانلود (Volume) و تاریخ آن است
+        download.Volume = editedDownload.Volume;
+        download.Date = editedDownload.Date;
+
+        // اگر لازم است باقی منطق مثل به‌روز کردن RemainingVolume انجام شود:
+        var parentPurchase = await _context.Purchases.FirstOrDefaultAsync(p => p.Id == download.PurchaseId);
+        if (parentPurchase != null)
+        {
+            // دوباره محاسبه RemainingVolume بر اساس مجموع دانلودهای جدید
+            var totalDownloaded = await _context.Downloads
+                .Where(d => d.PurchaseId == parentPurchase.Id)
+                .SumAsync(d => d.Volume);
+            parentPurchase.RemainingVolume = parentPurchase.TotalVolume - totalDownloaded;
+        }
+
+        _context.Downloads.Update(download);
+        await _context.SaveChangesAsync();
+        return Ok(download);
+    }
 }

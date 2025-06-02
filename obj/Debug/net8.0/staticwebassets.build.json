@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "2r/TMKQ5mwb4DxFFwsRJqheZgo9WP0pN21aPJrEb1bo=",
+  "Hash": "3ZajY+CTK/5IrOa4aYuss4/QzFOwuyyHe9B2Z3xGeFA=",
   "Source": "backtimetracker",
   "BasePath": "_content/backtimetracker",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

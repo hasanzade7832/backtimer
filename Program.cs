@@ -99,6 +99,15 @@ builder.Services.AddCors(options =>
          .AllowAnyMethod());
 });
 
+//const string FrontPolicy = "Front";
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(FrontPolicy, p =>
+//        p.WithOrigins("http://localhost:5173")
+//         .AllowAnyHeader()
+//         .AllowAnyMethod());
+//});
+
 /*────────────────── 8) Services & DI ─────────────*/
 builder.Services.AddScoped<JwtService>();
 

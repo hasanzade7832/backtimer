@@ -452,6 +452,48 @@
         }
       }
     },
+    "/api/Internet/EditDownload/{id}": {
+      "put": {
+        "tags": [
+          "Internet"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Download"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Download"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Download"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/login": {
       "post": {
         "tags": [

@@ -242,6 +242,27 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.InternetController",
+    "Method": "EditDownload",
+    "RelativePath": "api/Internet/EditDownload/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "editedDownload",
+        "Type": "Download",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.InternetController",
     "Method": "EditPurchase",
     "RelativePath": "api/Internet/EditPurchase/{id}",
     "HttpMethod": "PUT",
