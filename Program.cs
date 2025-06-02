@@ -94,7 +94,7 @@ const string FrontPolicy = "Front";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontPolicy, p =>
-        p.WithOrigins("http://localhost:5173")
+        p.AllowAnyOrigin()
          .AllowAnyHeader()
          .AllowAnyMethod());
 });
@@ -112,13 +112,28 @@ using (var scope = app.Services.CreateScope())
 }
 
 /*────────────────── 10) Middleware pipeline ──────*/
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
-app.UseHttpsRedirection();
+app.UseSwagger();
+app.UseSwaggerUI();
+
+//app.UseSwaggerUI(c =>
+//{
+//    c.SwaggerEndpoint("/swagger/v1/swagger.json", "GTC API v1");
+//});
+
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/swagger");
+    return Task.CompletedTask;
+});
+
+//app.UseHttpsRedirection();
+
 app.UseCors(FrontPolicy);
 app.UseAuthentication();   // ← قبل از UseAuthorization
 app.UseAuthorization();
