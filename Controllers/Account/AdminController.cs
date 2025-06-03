@@ -1,5 +1,5 @@
 ﻿using backtimetracker.Data;
-using backtimetracker.Models;
+using backtimetracker.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

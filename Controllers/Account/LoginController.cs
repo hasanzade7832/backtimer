@@ -5,9 +5,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using backtimetracker.Models;
 using backtimetracker.Models.Auth;
 using Microsoft.Extensions.Configuration;
+using backtimetracker.Models.User;
 
 namespace backtimetracker.Controllers.Account
 {

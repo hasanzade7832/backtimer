@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\controllers\\internetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\internetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\models\\download.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\download.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\models\\swagger\\signalrswaggerdocumentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\swagger\\signalrswaggerdocumentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\controllers\\tasks\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\tasks\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\controllers\\tasks\\admintaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\tasks\\admintaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\controllers\\activities\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\activities\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\models\\hubs\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\hubs\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Download.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Download.cs",
-              "RelativeDocumentMoniker": "Models\\Download.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Download.cs",
-              "RelativeToolTip": "Models\\Download.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T14:53:40.813Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T10:45:32.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Purchase.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Purchase.cs",
-              "RelativeDocumentMoniker": "Models\\Purchase.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Purchase.cs",
-              "RelativeToolTip": "Models\\Purchase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T10:45:25.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignalRSwaggerDocumentFilter.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Swagger\\SignalRSwaggerDocumentFilter.cs",
+              "RelativeDocumentMoniker": "Models\\Swagger\\SignalRSwaggerDocumentFilter.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Swagger\\SignalRSwaggerDocumentFilter.cs",
+              "RelativeToolTip": "Models\\Swagger\\SignalRSwaggerDocumentFilter.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T14:52:50.508Z",
+              "WhenOpened": "2025-06-03T09:37:37.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserTaskController.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Tasks\\UserTaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Tasks\\UserTaskController.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Tasks\\UserTaskController.cs",
+              "RelativeToolTip": "Controllers\\Tasks\\UserTaskController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:31:56.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Activities\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Activities\\ActivitiesController.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Activities\\ActivitiesController.cs",
+              "RelativeToolTip": "Controllers\\Activities\\ActivitiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:24:00.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminTaskController.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Tasks\\AdminTaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Tasks\\AdminTaskController.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\Tasks\\AdminTaskController.cs",
+              "RelativeToolTip": "Controllers\\Tasks\\AdminTaskController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:18:56.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InternetController.cs",
-              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\InternetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InternetController.cs",
-              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Controllers\\InternetController.cs",
-              "RelativeToolTip": "Controllers\\InternetController.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAmwI0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T14:03:53.997Z",
+              "WhenOpened": "2025-06-03T09:18:05.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:17:36.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskHub.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Hubs\\TaskHub.cs",
+              "RelativeDocumentMoniker": "Models\\Hubs\\TaskHub.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Models\\Hubs\\TaskHub.cs",
+              "RelativeToolTip": "Models\\Hubs\\TaskHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T08:43:20.519Z",
               "EditorCaption": ""
             }
           ]

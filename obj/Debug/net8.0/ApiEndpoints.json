@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
+    "ContainingType": "backtimetracker.Controllers.Activities.ActivitiesController",
     "Method": "GetActivities",
     "RelativePath": "api/Activities",
     "HttpMethod": "GET",
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[backtimetracker.Models.Activity, backtimetracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backtimetracker.Models.Activities.Activity, backtimetracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
+    "ContainingType": "backtimetracker.Controllers.Activities.ActivitiesController",
     "Method": "CreateActivity",
     "RelativePath": "api/Activities",
     "HttpMethod": "POST",
@@ -29,13 +29,13 @@
     "Parameters": [
       {
         "Name": "activity",
-        "Type": "backtimetracker.Models.Activity",
+        "Type": "backtimetracker.Models.Activities.Activity",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "backtimetracker.Models.Activity",
+        "Type": "backtimetracker.Models.Activities.Activity",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
+    "ContainingType": "backtimetracker.Controllers.Activities.ActivitiesController",
     "Method": "DeleteActivity",
     "RelativePath": "api/Activities/{id}",
     "HttpMethod": "DELETE",
@@ -62,7 +62,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.ActivitiesController",
+    "ContainingType": "backtimetracker.Controllers.Activities.ActivitiesController",
     "Method": "UpdateActivity",
     "RelativePath": "api/Activities/{id}",
     "HttpMethod": "PUT",
@@ -76,7 +76,7 @@
       },
       {
         "Name": "activity",
-        "Type": "backtimetracker.Models.Activity",
+        "Type": "backtimetracker.Models.Activities.Activity",
         "IsRequired": true
       }
     ],
@@ -155,7 +155,7 @@
       },
       {
         "Name": "model",
-        "Type": "backtimetracker.Models.ApplicationUser",
+        "Type": "backtimetracker.Models.User.ApplicationUser",
         "IsRequired": true
       }
     ],
@@ -178,7 +178,86 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "GetAllTasks",
+    "RelativePath": "api/AdminTask/All",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "ConfirmTask",
+    "RelativePath": "api/AdminTask/Confirm/{userTaskId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTaskId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "CreateTask",
+    "RelativePath": "api/AdminTask/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "backtimetracker.Models.Task.CreateTaskDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "DeleteTask",
+    "RelativePath": "api/AdminTask/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "EditTask",
+    "RelativePath": "api/AdminTask/Edit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "backtimetracker.Models.Task.EditTaskDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "AddDownload",
     "RelativePath": "api/Internet/AddDownload/{purchaseId}",
     "HttpMethod": "POST",
@@ -192,14 +271,14 @@
       },
       {
         "Name": "model",
-        "Type": "backtimetracker.Models.Download",
+        "Type": "backtimetracker.Models.Internet.Download",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "AddPurchase",
     "RelativePath": "api/Internet/AddPurchase",
     "HttpMethod": "POST",
@@ -208,14 +287,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "backtimetracker.Models.Purchase",
+        "Type": "backtimetracker.Models.Internet.Purchase",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "GetAllPurchases",
     "RelativePath": "api/Internet/All",
     "HttpMethod": "GET",
@@ -225,7 +304,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "DeleteDownload",
     "RelativePath": "api/Internet/DeleteDownload/{id}",
     "HttpMethod": "DELETE",
@@ -241,7 +320,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "DeletePurchase",
     "RelativePath": "api/Internet/DeletePurchase/{id}",
     "HttpMethod": "DELETE",
@@ -257,7 +336,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "EditDownload",
     "RelativePath": "api/Internet/EditDownload/{id}",
     "HttpMethod": "PUT",
@@ -271,14 +350,14 @@
       },
       {
         "Name": "editedDownload",
-        "Type": "backtimetracker.Models.Download",
+        "Type": "backtimetracker.Models.Internet.Download",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.InternetController",
+    "ContainingType": "backtimetracker.Controllers.Interner.InternetController",
     "Method": "EditPurchase",
     "RelativePath": "api/Internet/EditPurchase/{id}",
     "HttpMethod": "PUT",
@@ -292,7 +371,7 @@
       },
       {
         "Name": "updated",
-        "Type": "backtimetracker.Models.Purchase",
+        "Type": "backtimetracker.Models.Internet.Purchase",
         "IsRequired": true
       }
     ],
@@ -331,7 +410,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "Get",
     "RelativePath": "api/TimeRecords",
     "HttpMethod": "GET",
@@ -341,7 +420,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "Post",
     "RelativePath": "api/TimeRecords",
     "HttpMethod": "POST",
@@ -350,14 +429,14 @@
     "Parameters": [
       {
         "Name": "record",
-        "Type": "backtimetracker.Models.TimeRecord",
+        "Type": "backtimetracker.Models.Activities.TimeRecord",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "GetById",
     "RelativePath": "api/TimeRecords/{id}",
     "HttpMethod": "GET",
@@ -373,7 +452,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "Delete",
     "RelativePath": "api/TimeRecords/{id}",
     "HttpMethod": "DELETE",
@@ -389,7 +468,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "Put",
     "RelativePath": "api/TimeRecords/{id}",
     "HttpMethod": "PUT",
@@ -403,14 +482,14 @@
       },
       {
         "Name": "model",
-        "Type": "backtimetracker.Models.TimeRecord",
+        "Type": "backtimetracker.Models.Activities.TimeRecord",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.TimeRecordsController",
+    "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "GetByActivity",
     "RelativePath": "api/TimeRecords/ByActivity/{activityId}",
     "HttpMethod": "GET",
@@ -426,24 +505,29 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "backtimetracker.Controllers.Tasks.UserTaskController",
+    "Method": "CompleteTask",
+    "RelativePath": "api/UserTask/Complete/{userTaskId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTaskId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.UserTaskController",
+    "Method": "GetMyTasks",
+    "RelativePath": "api/UserTask/MyTasks",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[backtimetracker.WeatherForecast, backtimetracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]

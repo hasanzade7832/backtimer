@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System.Security.Claims;
 using backtimetracker.Data;
-using backtimetracker.Models;
+using backtimetracker.Models.Internet;
 
-namespace backtimetracker.Controllers
+namespace backtimetracker.Controllers.Interner
 {
     [Authorize]
     [ApiController]
