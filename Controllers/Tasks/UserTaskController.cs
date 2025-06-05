@@ -1,5 +1,4 @@
-﻿// File: Controllers/Tasks/UserTaskController.cs
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.SignalR;
@@ -7,7 +6,6 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-
 using backtimetracker.Data;
 using backtimetracker.Models.Task;
 using backtimetracker.Hubs;
@@ -45,9 +43,9 @@ namespace backtimetracker.Controllers.Tasks
             return Ok(myTasks);
         }
 
-        // ── 2) کاربرِ عادی وقتی یک تسک را تکمیل می‌کند (تیک می‌زند) ──
+        // ── 2) کاربر وقتی یک تسک را کامل می‌کند (تیک می‌زند و درصد خود را ارسال می‌کند) ──
         [HttpPost("Complete/{userTaskId}")]
-        public async Task<IActionResult> CompleteTask(int userTaskId)
+        public async Task<IActionResult> CompleteTask(int userTaskId, [FromBody] int percentComplete)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var ut = await _context.UserTasks
@@ -55,19 +53,31 @@ namespace backtimetracker.Controllers.Tasks
                 .FirstOrDefaultAsync(x => x.Id == userTaskId && x.UserId == userId);
 
             if (ut == null)
-                return NotFound();
+                return NotFound(new { message = "تسک تخصیص‌یافته یافت نشد." });
 
             if (ut.IsCompletedByUser)
-                return BadRequest("این تسک قبلاً تکمیل شده.");
+                return BadRequest(new { message = "این تسک قبلاً تکمیل شده است." });
 
-            ut.IsCompletedByUser = true;
-            ut.CompletedAt = DateTime.UtcNow;
+            if (percentComplete < 0 || percentComplete > 100)
+                return BadRequest(new { message = "درصد پیشرفت باید بین 0 تا 100 باشد." });
+
+            // به‌روز کردن وضعیت و درصد پیشرفت
+            ut.PercentComplete = percentComplete;
+            ut.IsCompletedByUser = (percentComplete == 100);
+
+            if (ut.IsCompletedByUser)
+                ut.CompletedAt = DateTime.UtcNow;
+
             ut.IsSeenByUser = true;
             await _context.SaveChangesAsync();
 
-            // حالا پیام آنی به ادمینِ سازنده تسک ارسال می‌کنیم:
+            // ارسال پیام آنی به ادمینِ سازندهٔ تسک
             await _hubContext.Clients.User(ut.TaskItem.CreatedByAdminId)
-                .SendAsync("TaskCompletedByUser", userTaskId);
+                .SendAsync("TaskCompletedByUser", new
+                {
+                    UserTaskId = ut.Id,
+                    Percent = ut.PercentComplete
+                });
 
             return Ok(ut);
         }

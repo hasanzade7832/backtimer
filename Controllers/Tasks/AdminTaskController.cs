@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using backtimetracker.Data;
 using backtimetracker.Models.Task;
-using backtimetracker.Hubs; // فرض کنید TaskHub در این namespace است
+using backtimetracker.Hubs; // فرض کنید TaskHub در این namespace قرار دارد
 
 namespace backtimetracker.Controllers.Tasks
 {
@@ -28,7 +28,7 @@ namespace backtimetracker.Controllers.Tasks
             _hubContext = hubContext;
         }
 
-        // ── 1) دریافت همهٔ تسک‌ها (با تخصیص‌ها) ──
+        // ── 1) دریافت همهٔ تسک‌ها (به‌همراه تخصیص‌ها و اطلاعات کاربر مربوطه) ──
         [HttpGet("All")]
         public async Task<IActionResult> GetAllTasks()
         {
@@ -45,7 +45,7 @@ namespace backtimetracker.Controllers.Tasks
         [HttpPost("Create")]
         public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto dto)
         {
-            // ۲.۱) بسازیم TaskItem جدید را
+            // ۲.۱) ساخت TaskItem جدید
             var taskItem = new TaskItem
             {
                 Title = dto.Title,
@@ -65,7 +65,8 @@ namespace backtimetracker.Controllers.Tasks
                 IsCompletedByUser = false,
                 IsConfirmedByAdmin = false,
                 IsSeenByUser = false,
-                IsSeenByAdmin = false
+                IsSeenByAdmin = false,
+                PercentComplete = 0
             }).ToList();
 
             _context.UserTasks.AddRange(userTasks);
@@ -81,13 +82,13 @@ namespace backtimetracker.Controllers.Tasks
             return Ok(taskItem);
         }
 
-        // ── 3) ویرایش یک تسک (عنوان و مهلت و توضیحات) ──
+        // ── 3) ویرایش یک تسک (عنوان، توضیحات و مهلت) ──
         [HttpPut("Edit/{id}")]
         public async Task<IActionResult> EditTask(int id, [FromBody] EditTaskDto dto)
         {
             var task = await _context.TaskItems.FindAsync(id);
             if (task == null)
-                return NotFound();
+                return NotFound(new { message = "تسک موردنظر یافت نشد." });
 
             task.Title = dto.Title;
             task.Description = dto.Description;
@@ -107,7 +108,7 @@ namespace backtimetracker.Controllers.Tasks
                 .FirstOrDefaultAsync(t => t.Id == id);
 
             if (task == null)
-                return NotFound();
+                return NotFound(new { message = "تسک موردنظر یافت نشد." });
 
             // ابتدا تخصیص‌ها را حذف می‌کنیم
             _context.UserTasks.RemoveRange(task.UserTasks);
@@ -115,7 +116,7 @@ namespace backtimetracker.Controllers.Tasks
             _context.TaskItems.Remove(task);
             await _context.SaveChangesAsync();
 
-            return Ok();
+            return Ok(new { message = "تسک و تمامی تخصیص‌های آن حذف شد." });
         }
 
         // ── 5) تأیید تسک تکمیل‌شده توسط کاربر ──
@@ -128,14 +129,14 @@ namespace backtimetracker.Controllers.Tasks
                 .FirstOrDefaultAsync(x => x.Id == userTaskId);
 
             if (ut == null)
-                return NotFound();
+                return NotFound(new { message = "تسک تخصیص‌یافته یافت نشد." });
 
             ut.IsConfirmedByAdmin = true;
             ut.ConfirmedAt = DateTime.UtcNow;
             ut.IsSeenByAdmin = true;
             await _context.SaveChangesAsync();
 
-            // ارسال اعلان به کاربر مبنی بر اینکه ادمین تأیید کرده
+            // ارسال اعلان به کاربر مبنی بر اینکه ادمین تأیید کرد
             await _hubContext.Clients.User(ut.UserId)
                 .SendAsync("TaskConfirmed", userTaskId);
 
