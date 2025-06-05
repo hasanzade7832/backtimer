@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using backtimetracker.Models.User;
 
-namespace backtimetracker.Models;
+namespace backtimetracker.Models.Activities;
 
 public class Activity
 {

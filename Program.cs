@@ -1,8 +1,10 @@
 ﻿using System.Text;
 using System.Text.Json.Serialization;
 using backtimetracker.Data;
-using backtimetracker.Models;
+using backtimetracker.Hubs;
+using backtimetracker.Models.User;
 using backtimetracker.Services;
+using backtimetracker.Swagger; // اضافه‌کردن namespaceِ DocumentFilter
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +21,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 /*────────────────── 2) Identity ───────────────────*/
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();   // ← شامل RoleManager هم می‌شود
+    .AddDefaultTokenProviders();
 
 /*────────────────── 3) JWT Auth ───────────────────*/
 builder.Services.AddAuthentication(opt =>
@@ -43,12 +45,27 @@ builder.Services.AddAuthentication(opt =>
         ValidAudience = audience,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
     };
+
+    // پیکربندی برای SignalR: دریافت توکن از access_token کوئری‌استرینگ
+    opt.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            var accessToken = context.Request.Query["access_token"];
+            var path = context.HttpContext.Request.Path;
+            if (!string.IsNullOrEmpty(accessToken) &&
+                path.StartsWithSegments("/hubs/task"))
+            {
+                context.Token = accessToken;
+            }
+            return Task.CompletedTask;
+        }
+    };
 });
 
 /*────────────────── 4) Authorization ─────────────*/
 builder.Services.AddAuthorization(opts =>
 {
-    // سیاست اختیاری؛ Attribute هم کفایت می‌کند
     opts.AddPolicy("Admin", p => p.RequireRole("Admin"));
 });
 
@@ -87,6 +104,9 @@ builder.Services.AddSwaggerGen(cfg =>
             Array.Empty<string>()
         }
     });
+
+    // ثبت DocumentFilter برای نمایش هاب SignalR در Swagger
+    cfg.DocumentFilter<SignalRSwaggerDocumentFilter>();
 });
 
 /*────────────────── 7) CORS برای React ────────────*/
@@ -99,41 +119,24 @@ builder.Services.AddCors(options =>
          .AllowAnyMethod());
 });
 
-//const string FrontPolicy = "Front";
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy(FrontPolicy, p =>
-//        p.WithOrigins("http://localhost:5173")
-//         .AllowAnyHeader()
-//         .AllowAnyMethod());
-//});
+/*────────────────── 8) SignalR ───────────────────*/
+builder.Services.AddSignalR();
 
-/*────────────────── 8) Services & DI ─────────────*/
+/*────────────────── 9) Services & DI ─────────────*/
 builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
 
-/*───── 9) ایجاد نقش‌ها / ادمین اولیه (یک‌بار در استارت) ─────*/
+/*───── 10) ایجاد نقش‌ها / ادمین اولیه (یک‌بار در استارت) ─────*/
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     await RoleInitializer.InitializeAsync(services);
 }
 
-/*────────────────── 10) Middleware pipeline ──────*/
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//}
-
+/*────────────────── 11) Middleware ───────────────────*/
 app.UseSwagger();
 app.UseSwaggerUI();
-
-//app.UseSwaggerUI(c =>
-//{
-//    c.SwaggerEndpoint("/swagger/v1/swagger.json", "GTC API v1");
-//});
 
 app.MapGet("/", context =>
 {
@@ -141,11 +144,15 @@ app.MapGet("/", context =>
     return Task.CompletedTask;
 });
 
-//app.UseHttpsRedirection();
-
 app.UseCors(FrontPolicy);
-app.UseAuthentication();   // ← قبل از UseAuthorization
+
+app.UseAuthentication();
 app.UseAuthorization();
 
+// مسیریابی کنترلرها
 app.MapControllers();
+
+// مسیریابی هاب SignalR
+app.MapHub<TaskHub>("/hubs/task");
+
 app.Run();

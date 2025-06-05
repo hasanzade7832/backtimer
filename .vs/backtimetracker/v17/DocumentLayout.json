@@ -11,34 +11,6 @@
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\download.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\download.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\internetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\internetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\timerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\timerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\timerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\timerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\account\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\account\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -72,10 +44,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\AppData\\Local\\Temp\\50609c0a-c258-4f0b-b6a6-ac9c51af9fc1_Updated_TimeTracker_Code.zip.fc1\\Models\\TimeRecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -175,11 +143,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 31,
               "Title": "20250601213058_RemoveDownloadDate\u0633.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250601213058_RemoveDownloadDate\u0633.cs",
               "RelativeDocumentMoniker": "Migrations\\20250601213058_RemoveDownloadDate\u0633.cs",
@@ -191,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Auth\\Register.cs",
               "RelativeDocumentMoniker": "Models\\Auth\\Register.cs",
@@ -209,26 +181,14 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-28T14:51:17.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Activity.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Activity.cs",
-              "RelativeDocumentMoniker": "Models\\Activity.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Activity.cs",
-              "RelativeToolTip": "Models\\Activity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:42:08.59Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Updated_AdminController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\Updated_AdminController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Updated_AdminController.cs",
@@ -240,73 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TimeRecordsController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\TimeRecordsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TimeRecordsController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\TimeRecordsController.cs",
-              "RelativeToolTip": "Controllers\\TimeRecordsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T19:09:04.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TimeRecord.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\TimeRecord.cs",
-              "RelativeDocumentMoniker": "Models\\TimeRecord.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\TimeRecord.cs",
-              "RelativeToolTip": "Models\\TimeRecord.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T19:03:10.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InternetController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\InternetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InternetController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\InternetController.cs",
-              "RelativeToolTip": "Controllers\\InternetController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAcwGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T20:50:37.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ActivitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\ActivitiesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ActivitiesController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\ActivitiesController.cs",
-              "RelativeToolTip": "Controllers\\ActivitiesController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAkwDcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T22:38:41.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T14:49:45.079Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 32,
               "Title": "20250601212317_RemoveDownloadDate.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250601212317_RemoveDownloadDate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250601212317_RemoveDownloadDate.cs",
@@ -318,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Account\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\Account\\AdminController.cs",
@@ -330,19 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Download.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Download.cs",
-              "RelativeDocumentMoniker": "Models\\Download.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Download.cs",
-              "RelativeToolTip": "Models\\Download.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T20:44:47.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Account\\RegisterController.cs",
               "RelativeDocumentMoniker": "Controllers\\Account\\RegisterController.cs",
@@ -354,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 33,
               "Title": "20250601211337_AddDownloadDate.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250601211337_AddDownloadDate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250601211337_AddDownloadDate.cs",
@@ -367,18 +262,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Purchase.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Purchase.cs",
-              "RelativeDocumentMoniker": "Models\\Purchase.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Purchase.cs",
-              "RelativeToolTip": "Models\\Purchase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T20:44:11.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Account\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\Account\\LoginController.cs",
@@ -390,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 34,
               "Title": "20250601201850_AddTotalSecondsToActivity.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250601201850_AddTotalSecondsToActivity.cs",
               "RelativeDocumentMoniker": "Migrations\\20250601201850_AddTotalSecondsToActivity.cs",
@@ -402,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Auth\\Login.cs",
               "RelativeDocumentMoniker": "Models\\Auth\\Login.cs",
@@ -414,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "AddUserDto.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\User\\AddUserDto.cs",
               "RelativeDocumentMoniker": "Models\\User\\AddUserDto.cs",
@@ -426,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 19,
               "Title": "20250530132521_Admin.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530132521_Admin.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530132521_Admin.cs",
@@ -438,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 20,
               "Title": "20250530135754_Admincontroll.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530135754_Admincontroll.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530135754_Admincontroll.cs",
@@ -450,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 21,
               "Title": "20250530140820_jwt-check.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530140820_jwt-check.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530140820_jwt-check.cs",
@@ -462,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 9,
               "Title": "RoleInitializer.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Services\\RoleInitializer.cs",
               "RelativeDocumentMoniker": "Services\\RoleInitializer.cs",
@@ -474,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -486,19 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T18:26:48.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 15,
               "Title": "Download.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\ff76a49a-8f41-4619-bbbf-395427d181b5_Updated_TimeTracker_Code.zip.1b5\\Models\\Download.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\ff76a49a-8f41-4619-bbbf-395427d181b5_Updated_TimeTracker_Code.zip.1b5\\Models\\Download.cs",
@@ -511,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 22,
               "Title": "20250530112242_AddRoleToUser.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530112242_AddRoleToUser.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530112242_AddRoleToUser.cs",
@@ -523,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 14,
               "Title": "Purchase.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\15bcdedd-3d4c-458d-8f21-b6589700a146_Updated_TimeTracker_Code.zip.146\\Models\\Purchase.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\15bcdedd-3d4c-458d-8f21-b6589700a146_Updated_TimeTracker_Code.zip.146\\Models\\Purchase.cs",
@@ -536,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 11,
               "Title": "TimeRecord.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\50609c0a-c258-4f0b-b6a6-ac9c51af9fc1_Updated_TimeTracker_Code.zip.fc1\\Models\\TimeRecord.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\50609c0a-c258-4f0b-b6a6-ac9c51af9fc1_Updated_TimeTracker_Code.zip.fc1\\Models\\TimeRecord.cs",
@@ -548,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 13,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\675baf50-bc64-43a3-a6ba-89cfa1ad18a2_Updated_TimeTracker_Code.zip.8a2\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\675baf50-bc64-43a3-a6ba-89cfa1ad18a2_Updated_TimeTracker_Code.zip.8a2\\Models\\ApplicationUser.cs",
@@ -561,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 23,
               "Title": "20250530015002_InitWithUserIds2.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530015002_InitWithUserIds2.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530015002_InitWithUserIds2.cs",
@@ -573,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 12,
               "Title": "ActivitiesController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\623b0d6e-841f-4226-9a48-e3772c647802_Updated_TimeTracker_Code.zip.802\\Controllers\\ActivitiesController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\623b0d6e-841f-4226-9a48-e3772c647802_Updated_TimeTracker_Code.zip.802\\Controllers\\ActivitiesController.cs",
@@ -586,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 16,
               "Title": "Activity.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\38f30281-e796-4c2c-9565-450a83218650_Updated_TimeTracker_Code.zip.650\\Models\\Activity.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\38f30281-e796-4c2c-9565-450a83218650_Updated_TimeTracker_Code.zip.650\\Models\\Activity.cs",
@@ -599,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 24,
               "Title": "20250530012742_InitWithUserIds.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530012742_InitWithUserIds.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530012742_InitWithUserIds.cs",
@@ -611,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 25,
               "Title": "20250530010244_AddUserIdToActivity.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530010244_AddUserIdToActivity.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530010244_AddUserIdToActivity.cs",
@@ -623,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 26,
               "Title": "20250530011056_AddUserIdToActivitys.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530011056_AddUserIdToActivitys.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530011056_AddUserIdToActivitys.cs",
@@ -635,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 27,
               "Title": "20250530011310_AddUserIdToActivityss.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530011310_AddUserIdToActivityss.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530011310_AddUserIdToActivityss.cs",
@@ -647,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 28,
               "Title": "20250530011937_InitWithUserId.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250530011937_InitWithUserId.cs",
               "RelativeDocumentMoniker": "Migrations\\20250530011937_InitWithUserId.cs",
@@ -659,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 29,
               "Title": "20250529215242_AddIdentityTables.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250529215242_AddIdentityTables.cs",
               "RelativeDocumentMoniker": "Migrations\\20250529215242_AddIdentityTables.cs",
@@ -671,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 17,
               "Title": "JwtServices.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Services\\JwtServices.cs",
               "RelativeDocumentMoniker": "Services\\JwtServices.cs",
@@ -683,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 18,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -695,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 30,
               "Title": "20250528205741_AddInternetTables.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250528205741_AddInternetTables.cs",
               "RelativeDocumentMoniker": "Migrations\\20250528205741_AddInternetTables.cs",

@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backtimetracker.Data;
-using backtimetracker.Models;
+using backtimetracker.Models.Activities;
 
-namespace backtimetracker.Controllers;
+namespace backtimetracker.Controllers.Activities;
 
 [Authorize]
 [ApiController]

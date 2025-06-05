@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace backtimetracker.Models
+namespace backtimetracker.Models.Internet
 {
     public class Purchase
     {

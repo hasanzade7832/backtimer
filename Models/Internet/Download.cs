@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace backtimetracker.Models
+namespace backtimetracker.Models.Internet
 {
     public class Download
     {

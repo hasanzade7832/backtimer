@@ -1,5 +1,5 @@
 ﻿// RoleInitializer.cs
-using backtimetracker.Models;
+using backtimetracker.Models.User;
 using Microsoft.AspNetCore.Identity;
 
 namespace backtimetracker.Services
