@@ -516,6 +516,11 @@
         "Name": "userTaskId",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "backtimetracker.Controllers.Tasks.UserTaskController\u002BCompleteTaskDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

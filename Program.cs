@@ -110,14 +110,27 @@ builder.Services.AddSwaggerGen(cfg =>
 });
 
 /*────────────────── 7) CORS برای React ────────────*/
+//const string FrontPolicy = "Front";
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(FrontPolicy, p =>
+//        p.AllowAnyOrigin()
+//         .AllowAnyHeader()
+//         .AllowAnyMethod());
+//});
+
+/*────────────────── 7) CORS برای React ────────────*/
 const string FrontPolicy = "Front";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontPolicy, p =>
-        p.AllowAnyOrigin()
+        p.WithOrigins("http://localhost:5173")  // آدرس دقیق فرانت
          .AllowAnyHeader()
-         .AllowAnyMethod());
+         .AllowAnyMethod()
+         .AllowCredentials()                     // لازم برای ارسال توکن/کوکی
+    );
 });
+
 
 /*────────────────── 8) SignalR ───────────────────*/
 builder.Services.AddSignalR();
@@ -145,6 +158,9 @@ app.MapGet("/", context =>
 });
 
 app.UseCors(FrontPolicy);
+app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+
 using backtimetracker.Data;
 using backtimetracker.Models.Task;
 using backtimetracker.Hubs;
@@ -28,7 +29,7 @@ namespace backtimetracker.Controllers.Tasks
             _hubContext = hubContext;
         }
 
-        // ── 1) دریافت همهٔ تسک‌هایی که به این کاربر تخصیص یافته ──
+        /*──────────────── 1) دریافت همهٔ تسک‌های کاربر ───────────────*/
         [HttpGet("MyTasks")]
         public async Task<IActionResult> GetMyTasks()
         {
@@ -43,40 +44,49 @@ namespace backtimetracker.Controllers.Tasks
             return Ok(myTasks);
         }
 
-        // ── 2) کاربر وقتی یک تسک را کامل می‌کند (تیک می‌زند و درصد خود را ارسال می‌کند) ──
+        /*──────────────── DTO برای ثبت درصد ────────────────────────*/
+        public class CompleteTaskDto
+        {
+            public int PercentComplete { get; set; } = 100;   // پیش‌فرض = تکمیل
+        }
+
+        /*──────────────── 2) ثبت پیشرفت یا تکمیل ────────────────────*/
         [HttpPost("Complete/{userTaskId}")]
-        public async Task<IActionResult> CompleteTask(int userTaskId, [FromBody] int percentComplete)
+        public async Task<IActionResult> CompleteTask(
+            int userTaskId,
+            [FromBody] CompleteTaskDto dto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var ut = await _context.UserTasks
                 .Include(x => x.TaskItem)
                 .FirstOrDefaultAsync(x => x.Id == userTaskId && x.UserId == userId);
 
             if (ut == null)
-                return NotFound(new { message = "تسک تخصیص‌یافته یافت نشد." });
+                return NotFound();
 
+            // فقط جلو برو اگر درصد جدید بزرگ‌تر از قبلی باشد
+            if (dto.PercentComplete < ut.PercentComplete)
+                return BadRequest("درصد جدید نمی‌تواند کمتر از قبلی باشد.");
+
+            // اگر پیش‌تر 100% شده، دیگر اجازه ثبت مجدد نیست
             if (ut.IsCompletedByUser)
-                return BadRequest(new { message = "این تسک قبلاً تکمیل شده است." });
+                return BadRequest("این تسک قبلاً به‌طور کامل تکمیل شده است.");
 
-            if (percentComplete < 0 || percentComplete > 100)
-                return BadRequest(new { message = "درصد پیشرفت باید بین 0 تا 100 باشد." });
-
-            // به‌روز کردن وضعیت و درصد پیشرفت
-            ut.PercentComplete = percentComplete;
-            ut.IsCompletedByUser = (percentComplete == 100);
-
-            if (ut.IsCompletedByUser)
-                ut.CompletedAt = DateTime.UtcNow;
-
+            /* به‌روزرسانی فیلدها */
+            ut.PercentComplete = dto.PercentComplete;
+            ut.IsCompletedByUser = dto.PercentComplete == 100;
+            ut.CompletedAt = DateTime.UtcNow;
             ut.IsSeenByUser = true;
+
             await _context.SaveChangesAsync();
 
-            // ارسال پیام آنی به ادمینِ سازندهٔ تسک
+            /* پیام آنی به ادمین سازندهٔ تسک */
             await _hubContext.Clients.User(ut.TaskItem.CreatedByAdminId)
                 .SendAsync("TaskCompletedByUser", new
                 {
-                    UserTaskId = ut.Id,
-                    Percent = ut.PercentComplete
+                    userTaskId = ut.Id,
+                    percent = ut.PercentComplete
                 });
 
             return Ok(ut);
