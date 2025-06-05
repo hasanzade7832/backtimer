@@ -179,7 +179,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "GetAllTasks",
+    "Method": "GetAll",
     "RelativePath": "api/AdminTask/All",
     "HttpMethod": "GET",
     "IsController": true,
@@ -189,7 +189,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "GetApprovedTasksByUser",
+    "Method": "GetApproved",
     "RelativePath": "api/AdminTask/Approved/ByUser/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -205,7 +205,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "ConfirmTask",
+    "Method": "Confirm",
     "RelativePath": "api/AdminTask/Confirm/{userTaskId}",
     "HttpMethod": "POST",
     "IsController": true,
@@ -221,7 +221,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "CreateTask",
+    "Method": "Create",
     "RelativePath": "api/AdminTask/Create",
     "HttpMethod": "POST",
     "IsController": true,
@@ -237,7 +237,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "DeleteTask",
+    "Method": "Delete",
     "RelativePath": "api/AdminTask/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -253,7 +253,7 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
-    "Method": "EditTask",
+    "Method": "Edit",
     "RelativePath": "api/AdminTask/Edit/{id}",
     "HttpMethod": "PUT",
     "IsController": true,

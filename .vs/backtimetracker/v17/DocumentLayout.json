@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\tasks\\admintaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\tasks\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\tasks\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250605232201_hubUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250605232201_hubUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\account\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\account\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\task\\edittaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\task\\edittaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\user\\uploadphotorequestcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\user\\uploadphotorequestcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\hubs\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\hubs\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,14 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserTaskController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Tasks\\UserTaskController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Tasks\\UserTaskController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Tasks\\UserTaskController.cs",
-              "RelativeToolTip": "Controllers\\Tasks\\UserTaskController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBQAAAA6AAAAAAAAAA==",
+              "Title": "20250605232201_hubUpdated.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250605232201_hubUpdated.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250605232201_hubUpdated.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250605232201_hubUpdated.cs",
+              "RelativeToolTip": "Migrations\\20250605232201_hubUpdated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:50:52.342Z",
+              "WhenOpened": "2025-06-05T23:22:01.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Task\\EditTaskDto.cs",
+              "RelativeDocumentMoniker": "Models\\Task\\EditTaskDto.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Task\\EditTaskDto.cs",
+              "RelativeToolTip": "Models\\Task\\EditTaskDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:14:12.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskHub.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Hubs\\TaskHub.cs",
+              "RelativeDocumentMoniker": "Models\\Hubs\\TaskHub.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Hubs\\TaskHub.cs",
+              "RelativeToolTip": "Models\\Hubs\\TaskHub.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:09:38.399Z",
               "EditorCaption": ""
             },
             {
@@ -57,48 +79,9 @@
               "RelativeDocumentMoniker": "Controllers\\Tasks\\AdminTaskController.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Tasks\\AdminTaskController.cs",
               "RelativeToolTip": "Controllers\\Tasks\\AdminTaskController.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAkwKcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAuwEkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:50:18.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Account\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Account\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Account\\ProfileController.cs",
-              "RelativeToolTip": "Controllers\\Account\\ProfileController.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAkwLAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:06:17.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UploadPhotoRequestcs.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\User\\UploadPhotoRequestcs.cs",
-              "RelativeDocumentMoniker": "Models\\User\\UploadPhotoRequestcs.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\User\\UploadPhotoRequestcs.cs",
-              "RelativeToolTip": "Models\\User\\UploadPhotoRequestcs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:06:01.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJ4AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:03:37.045Z",
+              "WhenOpened": "2025-06-05T22:55:03.975Z",
               "EditorCaption": ""
             }
           ]

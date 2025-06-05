@@ -1,10 +1,14 @@
-﻿using System;
+﻿// File: backtimetracker/Models/Task/EditTaskDto.cs
+
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace backtimetracker.Models.Task
 {
     /// <summary>
-    /// دادهٔ ورودی برای ویرایش تسک (عنوان، توضیحات، مهلت)
+    /// دادهٔ ورودی برای ویرایش تسک:
+    /// شامل عنوان، توضیحات، مهلت و فهرست شناسه‌های کاربران اختصاصی‌شده.
     /// </summary>
     public class EditTaskDto
     {
@@ -17,5 +21,14 @@ namespace backtimetracker.Models.Task
 
         [Required(ErrorMessage = "مهلت اجرا (Deadline) الزامی است.")]
         public DateTime Deadline { get; set; }
+
+        /// <summary>
+        /// لیست شناسهٔ کاربران (ApplicationUser.Id) که باید
+        /// این تسک به آنها اختصاص یابد (به‌روز رسانی‌شده).
+        /// اگر این لیست پر باشد، کاربرانی که اکنون در لیست نیستند حذف می‌شوند
+        /// و کاربران جدید اضافه خواهند شد.
+        /// </summary>
+        [Required(ErrorMessage = "باید حداقل یک کاربر را انتخاب کنید.")]
+        public List<string> UserIds { get; set; } = new List<string>();
     }
 }

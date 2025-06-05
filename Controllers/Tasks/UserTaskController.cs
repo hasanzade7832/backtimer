@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿// مسیر: backtimetracker/Controllers/Tasks/UserTaskController.cs
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.SignalR;
@@ -6,7 +8,6 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-
 using backtimetracker.Data;
 using backtimetracker.Models.Task;
 using backtimetracker.Hubs;
@@ -29,6 +30,7 @@ namespace backtimetracker.Controllers.Tasks
         }
 
         /*──────────────── 1) دریافت همهٔ تسک‌های کاربر ───────────────*/
+        [Authorize] // فقط کاربران لاگین‌شده می‌توانند تسک‌های خودشان را ببینند
         [HttpGet("MyTasks")]
         public async Task<IActionResult> GetMyTasks()
         {
@@ -50,6 +52,7 @@ namespace backtimetracker.Controllers.Tasks
         }
 
         /*──────────────── 2) ثبت پیشرفت یا تکمیل ────────────────────*/
+        [Authorize]
         [HttpPost("Complete/{userTaskId}")]
         public async Task<IActionResult> CompleteTask(
             int userTaskId,

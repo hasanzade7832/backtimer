@@ -1,59 +1,65 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿// File: backtimetracker/Hubs/TaskHub.cs
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
 namespace backtimetracker.Hubs
 {
     /// <summary>
-    /// هاب SignalR برای ارتباط بی‌درنگ (real-time) پیام‌های مربوط به تسک.
+    /// هاب SignalR برای تمام رویدادهای بلادرنگ مرتبط با «تسک‌ها».
+    /// از Clients.User برای ارسال مستقیم به یک کاربر خاص استفاده می‌کنیم
+    /// (UserIdentifier = ApplicationUser.Id در Identity).
     /// </summary>
     [Authorize]
     public class TaskHub : Hub
     {
+        /*──────────────── پیام‌های مربوط به اختصاص و پیشرفت ────────────────*/
+
         /// <summary>
-        /// وقتی ادمین یک تسک را به کاربری اختصاص می‌دهد،
-        /// این متد را از کنترلر فراخوانی می‌کنیم تا پیام «TaskAssigned» برای کاربر ارسال شود.
+        /// اعلان «یک تسک جدید برایت ثبت شد».
         /// </summary>
-        /// <param name="userId">شناسهٔ کاربری که تسک برایش ارسال شده</param>
-        /// <param name="taskId">شناسهٔ تسک اختصاص یافته</param>
         public async Task SendTaskAssignedMessage(string userId, int taskId)
-        {
-            await Clients.User(userId).SendAsync("TaskAssigned", taskId);
-        }
+            => await Clients.User(userId).SendAsync("TaskAssigned", taskId);
 
         /// <summary>
-        /// وقتی کاربر یک تسک را تکمیل می‌کند، از کنترلر
-        /// فراخوانی می‌شود تا پیام «TaskCompletedByUser» برای ادمین ارسال شود.
+        /// اعلان «کاربر پیشرفت یا تکمیل تسک را گزارش کرد» برای ادمین سازندهٔ تسک.
+        /// payload → { userTaskId, percent }
         /// </summary>
-        /// <param name="adminId">شناسهٔ ادمین سازندهٔ تسک</param>
-        /// <param name="userTaskId">شناسهٔ رکورد UserTask (تسک–کاربر)</param>
-        public async Task SendTaskCompletedMessage(string adminId, int userTaskId)
-        {
-            await Clients.User(adminId).SendAsync("TaskCompletedByUser", userTaskId);
-        }
+        public async Task SendTaskCompletedMessage(string adminId, object payload)
+            => await Clients.User(adminId).SendAsync("TaskCompletedByUser", payload);
 
         /// <summary>
-        /// وقتی ادمین یک تسک تکمیل‌شده توسط کاربر را تأیید می‌کند،
-        /// این متد را فراخوانی می‌کنیم تا پیام «TaskConfirmed» برای کاربر ارسال شود.
+        /// اعلان «ادمین تسک را تأیید کرد» برای کاربر انجام‌دهنده.
         /// </summary>
-        /// <param name="userId">شناسهٔ کاربری که تسک را انجام داده بود</param>
-        /// <param name="userTaskId">شناسهٔ رکورد UserTask</param>
         public async Task SendTaskConfirmedMessage(string userId, int userTaskId)
-        {
-            await Clients.User(userId).SendAsync("TaskConfirmed", userTaskId);
-        }
+            => await Clients.User(userId).SendAsync("TaskConfirmed", userTaskId);
+
+        /*──────────────── پیام‌های جدید: ویرایش یا حذف ─────────────────────*/
 
         /// <summary>
-        /// (اختیاری) در صورت نیاز می‌توان متد زیر را Override کرد تا هنگام اتصال کاربر،
-        /// او را به یک گروه خاص اضافه کنیم یا عملیات دیگری انجام دهیم.
-        /// ولی در سناریوی کنونی که از Clients.User استفاده می‌شود، نیازی به این بخش نیست.
+        /// اعلان «جزئیات تسک تغییر کرد» برای یک کاربر.
         /// </summary>
-        // public override async Task OnConnectedAsync()
-        // {
-        //     var userId = Context.UserIdentifier;
-        //     // اگر خواستید کاربران را در گروه‌هایی عضو کنید:
-        //     // await Groups.AddToGroupAsync(Context.ConnectionId, $"User_{userId}");
-        //     await base.OnConnectedAsync();
-        // }
+        public async Task SendTaskUpdatedMessage(string userId, int taskId)
+            => await Clients.User(userId).SendAsync("TaskUpdated", taskId);
+
+        /// <summary>
+        /// اعلان «تسک از فهرست شما حذف شد» (به‌دلیل حذف یا لغو تخصیص).
+        /// </summary>
+        public async Task SendTaskDeletedMessage(string userId, int taskId)
+            => await Clients.User(userId).SendAsync("TaskDeleted", taskId);
+
+        /*──────────────── (اختیاری) رویداد اتصال ───────────────────────────
+
+        // اگر بخواهید در زمان اتصال، کاربر را به گروه خاصی اضافه کنید
+        // یا شناسهٔ اتصال را ذخیره کنید، می‌توانید این متد را فعال کنید.
+
+        public override async Task OnConnectedAsync()
+        {
+            var userId = Context.UserIdentifier;   // ApplicationUser.Id
+            // await Groups.AddToGroupAsync(Context.ConnectionId, $"User_{userId}");
+            await base.OnConnectedAsync();
+        }
+        */
     }
 }
