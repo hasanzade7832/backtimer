@@ -189,6 +189,22 @@
   },
   {
     "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
+    "Method": "GetApprovedTasksByUser",
+    "RelativePath": "api/AdminTask/Approved/ByUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Tasks.AdminTaskController",
     "Method": "ConfirmTask",
     "RelativePath": "api/AdminTask/Confirm/{userTaskId}",
     "HttpMethod": "POST",
@@ -389,6 +405,58 @@
         "Name": "model",
         "Type": "backtimetracker.Models.Auth.Login",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.ProfileController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "backtimetracker.Models.User.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.ProfileController",
+    "Method": "DeletePhoto",
+    "RelativePath": "api/Profile/DeletePhoto",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.ProfileController",
+    "Method": "UploadPhoto",
+    "RelativePath": "api/Profile/UploadPhoto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

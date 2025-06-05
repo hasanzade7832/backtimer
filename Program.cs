@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -138,6 +139,11 @@ builder.Services.AddSignalR();
 /*────────────────── 9) Services & DI ─────────────*/
 builder.Services.AddScoped<JwtService>();
 
+builder.Services.Configure<FormOptions>(opts =>
+{
+    opts.MultipartBodyLengthLimit = 10 * 1024 * 1024;   // ۱۰ مگابایت
+});
+
 var app = builder.Build();
 
 /*───── 10) ایجاد نقش‌ها / ادمین اولیه (یک‌بار در استارت) ─────*/
@@ -148,14 +154,29 @@ using (var scope = app.Services.CreateScope())
 }
 
 /*────────────────── 11) Middleware ───────────────────*/
+
 app.UseSwagger();
 app.UseSwaggerUI();
+
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseDeveloperExceptionPage();   // ← این خط حتماً باشد
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+//else
+//{
+//    app.UseExceptionHandler("/Error");
+//}
 
 app.MapGet("/", context =>
 {
     context.Response.Redirect("/swagger");
     return Task.CompletedTask;
 });
+
+
+app.UseStaticFiles();
 
 app.UseCors(FrontPolicy);
 app.UseAuthentication();

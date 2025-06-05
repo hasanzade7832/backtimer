@@ -38,11 +38,17 @@ namespace backtimetracker.Models.User
 
         /// <summary>
         /// نقش کاربر (برای نمایش ساده در UI یا منطق دلخواه شما). 
-        /// توجه کنید که خود Identity هم نقش (Role) را مدیریت می‌کند (ساده‌تر است از RoleManager/UserManager استفاده کنید).
+        /// توجه کنید که خود Identity هم نقش (Role) را مدیریت می‌کند.
         /// این فیلد صرفاً یک مقدار کمکی است.
         /// </summary>
         [MaxLength(20)]
         public string Role { get; set; } = "User";
+
+        /// <summary>
+        /// مسیر نسبی عکس پروفایل (مثلاً "uploads/{UserId}.jpg")
+        /// این فیلد به کمک UploadPhoto در ProfileController پر می‌شود.
+        /// </summary>
+        public string? PhotoUrl { get; set; }
 
         /// <summary>
         /// کالکشن تخصیص تسک‌ها به این کاربر

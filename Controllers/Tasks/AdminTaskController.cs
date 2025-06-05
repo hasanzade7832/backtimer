@@ -142,5 +142,26 @@ namespace backtimetracker.Controllers.Tasks
 
             return Ok(ut);
         }
+
+        // ── 6) دریافت تسک‌های تأییدشده توسط ادمین برای یک کاربر خاص ──
+        [HttpGet("Approved/ByUser/{userId}")]
+        public async Task<IActionResult> GetApprovedTasksByUser(string userId)
+        {
+            var userTasks = await _context.UserTasks
+                .Where(ut => ut.UserId == userId && ut.IsConfirmedByAdmin)
+                .Include(ut => ut.TaskItem)
+                .ToListAsync();
+
+            var approvedTasks = userTasks.Select(ut => new
+            {
+                ut.TaskItem.Id,
+                ut.TaskItem.Title,
+                ut.TaskItem.Description,
+                ut.TaskItem.Deadline,
+                IsApprovedByAdmin = ut.IsConfirmedByAdmin
+            });
+
+            return Ok(approvedTasks);
+        }
     }
 }

@@ -13,7 +13,6 @@ using backtimetracker.Hubs;
 
 namespace backtimetracker.Controllers.Tasks
 {
-    [Authorize(Roles = "User")]
     [ApiController]
     [Route("api/[controller]")]
     public class UserTaskController : ControllerBase
