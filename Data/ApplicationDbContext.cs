@@ -5,6 +5,8 @@ using backtimetracker.Models.Internet;
 using backtimetracker.Models.PettyCashes;
 using backtimetracker.Models.Task;
 using backtimetracker.Models.User;
+using backtimetracker.Models.Egg;           // برای EggLog
+
 
 // اضافه کردن فضای نام مربوط به مدل‌های PettyCash و Expense
 
@@ -37,7 +39,7 @@ namespace backtimetracker.Data
         /// </summary>
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<Download> Downloads { get; set; }
-
+        public DbSet<EggLog> EggLogs { get; set; }
         #endregion
 
         #region جدول‌های مربوط به ماژول تسک (Task)

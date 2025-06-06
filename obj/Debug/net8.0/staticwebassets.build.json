@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tSCHGLLHr0PxiX7OXQyLMFnNV+MXPy0FE188L9bYZlk=",
+  "Hash": "O0wq8PKaU/Qw45lHZ49L5QcG/iQooLZvg4/mfH3tqYg=",
   "Source": "backtimetracker",
   "BasePath": "_content/backtimetracker",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\06998d0c-0467-4d6c-862f-015c740fec07.jpg",
+      "SourceId": "backtimetracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\",
+      "BasePath": "_content/backtimetracker",
+      "RelativePath": "uploads/06998d0c-0467-4d6c-862f-015c740fec07#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d3rri7fkqi",
+      "Integrity": "F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\06998d0c-0467-4d6c-862f-015c740fec07.jpg"
+    },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\5499803b-2f7f-40a5-a8a1-2af35f61e548.jpg",
       "SourceId": "backtimetracker",
@@ -38,6 +59,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5499803b-2f7f-40a5-a8a1-2af35f61e548.jpg"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\5b0c3440-5714-464c-803a-884ef6a4ec22.jpg",
+      "SourceId": "backtimetracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\",
+      "BasePath": "_content/backtimetracker",
+      "RelativePath": "uploads/5b0c3440-5714-464c-803a-884ef6a4ec22#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d3rri7fkqi",
+      "Integrity": "F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5b0c3440-5714-464c-803a-884ef6a4ec22.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\a86ba4bd-a223-4d46-88f4-532d8476dcee.jpg",
       "SourceId": "backtimetracker",
       "SourceType": "Discovered",
@@ -57,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\a86ba4bd-a223-4d46-88f4-532d8476dcee.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg",
+      "SourceId": "backtimetracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\",
+      "BasePath": "_content/backtimetracker",
+      "RelativePath": "uploads/f27a98dd-ceaf-4f2a-9460-699c01d9d3de#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d3rri7fkqi",
+      "Integrity": "F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\profiles\\36efea7b26b14bb48fced109fd4cfac2.jpg",
@@ -123,6 +186,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "uploads/06998d0c-0467-4d6c-862f-015c740fec07.d3rri7fkqi.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\06998d0c-0467-4d6c-862f-015c740fec07.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:09:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3rri7fkqi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/06998d0c-0467-4d6c-862f-015c740fec07.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/06998d0c-0467-4d6c-862f-015c740fec07.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\06998d0c-0467-4d6c-862f-015c740fec07.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:09:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
     {
       "Route": "uploads/5499803b-2f7f-40a5-a8a1-2af35f61e548.d3rri7fkqi.jpg",
       "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\5499803b-2f7f-40a5-a8a1-2af35f61e548.jpg",
@@ -206,6 +351,88 @@
       ]
     },
     {
+      "Route": "uploads/5b0c3440-5714-464c-803a-884ef6a4ec22.d3rri7fkqi.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\5b0c3440-5714-464c-803a-884ef6a4ec22.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:09:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3rri7fkqi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/5b0c3440-5714-464c-803a-884ef6a4ec22.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5b0c3440-5714-464c-803a-884ef6a4ec22.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\5b0c3440-5714-464c-803a-884ef6a4ec22.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:09:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
+    {
       "Route": "uploads/a86ba4bd-a223-4d46-88f4-532d8476dcee.d3rri7fkqi.jpg",
       "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\a86ba4bd-a223-4d46-88f4-532d8476dcee.jpg",
       "Selectors": [],
@@ -274,6 +501,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Fri, 06 Jun 2025 19:00:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f27a98dd-ceaf-4f2a-9460-699c01d9d3de.d3rri7fkqi.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:07:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3rri7fkqi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg",
+      "AssetFile": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\wwwroot\\uploads\\f27a98dd-ceaf-4f2a-9460-699c01d9d3de.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "175066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F4BzVsdNtBG3DkIzYmHN66klFLlkpepQtya2y0kTZ/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 19:07:03 GMT"
         },
         {
           "Name": "Cache-Control",
