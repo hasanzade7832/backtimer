@@ -1,0 +1,142 @@
+// File: src/components/Modal.jsx
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Modal({
+  open,
+  onClose,
+  children,
+  position = "center",
+}) {
+  const pos =
+    position === "down" ? "items-start pt-24 sm:pt-32" : "items-center";
+
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          className={`fixed inset-0 z-[110] flex justify-center ${pos} bg-black/50 backdrop-blur-sm`}
+          onClick={onClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="relative w-full max-w-md max-h-[80vh] overflow-y-auto bg-white p-6 rounded-xl shadow-lg"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ y: -120, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -80, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 260, damping: 24 }}
+          >
+            <button
+              className="absolute top-3 right-4 text-xl text-gray-500 hover:text-red-600"
+              onClick={onClose}
+            >
+              ×
+            </button>
+            {children}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+
+////////////////////////////////////////////////////////////
+
+// File: src/components/JalaliDatePicker.jsx
+
+import React from "react";
+import DatePicker from "react-multi-date-picker";
+import DateObject from "react-date-object";
+import gregorian from "react-date-object/calendars/gregorian";
+import persian from "react-date-object/calendars/persian";
+import persian_fa from "react-date-object/locales/persian_fa";
+
+/* ---------- توابع کمکی تاریخ (export می‌شوند) ---------- */
+/** ارقام فارسی → انگلیسی (برای محاسبات) */
+export const faToEnDigits = (s) =>
+  typeof s === "string"
+    ? s.replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d).toString())
+    : s;
+
+/**
+ * ساخت DateObject جلالی از ورودی‌های مختلف
+ * خروجی: DateObject (calendar: persian, locale: fa)
+ */
+export const toPersianDateObject = (value) => {
+  if (value instanceof DateObject) {
+    return value.convert(persian).setLocale("fa");
+  }
+
+  if (typeof value === "string") {
+    const raw = value.replace(/-/g, "/");
+    const en = faToEnDigits(raw);
+    const year = parseInt(en.split("/")[0], 10);
+
+    // اگر رشتهٔ جلالی معتبر بود
+    if (year >= 1200 && year <= 1600) {
+      try {
+        return new DateObject({
+          calendar: persian,
+          locale: persian_fa,
+          date: raw,
+        }).setLocale("fa");
+      } catch {}
+    }
+
+    // در غیر این صورت: میلادی → جلالی
+    try {
+      const gObj = new DateObject({
+        calendar: gregorian,
+        locale: persian_fa,
+        date: raw,
+      });
+      return gObj.convert(persian).setLocale("fa");
+    } catch {}
+  }
+
+  // در صورت شکست یا ورودی نامعتبر: امروز جلالی
+  return new DateObject({ calendar: persian, locale: persian_fa });
+};
+
+/** خروجی همیشه «YYYY/MM/DD» با ارقام فارسی */
+export const persianDate = (val) =>
+  toPersianDateObject(val).format("YYYY/MM/DD");
+
+/** برای ذخیره در سرور یا تبدیل DateObject → رشتهٔ جلالی */
+export const toJalaliStr = (dObj) =>
+  toPersianDateObject(dObj).format("YYYY/MM/DD");
+
+/* ---------- کامپوننت تاریخ (ورودی شمسی) ---------- */
+/*
+  props:
+    • value, onChange (اجباری)
+    • inputClass, calendarPosition, ...rest (اختیاری)
+*/
+export default function JalaliDatePicker({
+  value,
+  onChange,
+  inputClass = "w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-pink-200 transition text-center",
+  calendarPosition = "bottom-right",
+  ...rest
+}) {
+  return (
+    <DatePicker
+      value={value}
+      onChange={onChange}
+      calendar={persian}
+      locale={persian_fa}
+      format="YYYY/MM/DD"
+      editable={false}
+      calendarPosition={calendarPosition}
+      portal
+      zIndex={2000}
+      inputClass={inputClass}
+      {...rest}
+    />
+  );
+}
+

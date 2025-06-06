@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backtimetracker.Data;
 
@@ -11,9 +12,11 @@ using backtimetracker.Data;
 namespace backtimetracker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250606161311_Expense")]
+    partial class Expense
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,63 @@ namespace backtimetracker.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BackTimeTracker.Models.PettyCashes.Expense", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("Amount")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<long?>("PettyCashId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ReceiptUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PettyCashId");
+
+                    b.ToTable("Expenses");
+                });
+
+            modelBuilder.Entity("BackTimeTracker.Models.PettyCashes.PettyCash", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PettyCashes");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -319,63 +379,6 @@ namespace backtimetracker.Migrations
                     b.ToTable("Purchases");
                 });
 
-            modelBuilder.Entity("backtimetracker.Models.PettyCashes.Expense", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<long>("Amount")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<long?>("PettyCashId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("ReceiptUrl")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PettyCashId");
-
-                    b.ToTable("Expenses");
-                });
-
-            modelBuilder.Entity("backtimetracker.Models.PettyCashes.PettyCash", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PettyCashes");
-                });
-
             modelBuilder.Entity("backtimetracker.Models.Task.TaskItem", b =>
                 {
                     b.Property<int>("Id")
@@ -488,6 +491,16 @@ namespace backtimetracker.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("BackTimeTracker.Models.PettyCashes.Expense", b =>
+                {
+                    b.HasOne("BackTimeTracker.Models.PettyCashes.PettyCash", "PettyCash")
+                        .WithMany("Expenses")
+                        .HasForeignKey("PettyCashId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("PettyCash");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -591,24 +604,14 @@ namespace backtimetracker.Migrations
                     b.Navigation("Purchase");
                 });
 
-            modelBuilder.Entity("backtimetracker.Models.PettyCashes.Expense", b =>
+            modelBuilder.Entity("BackTimeTracker.Models.PettyCashes.PettyCash", b =>
                 {
-                    b.HasOne("backtimetracker.Models.PettyCashes.PettyCash", "PettyCash")
-                        .WithMany("Expenses")
-                        .HasForeignKey("PettyCashId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("PettyCash");
+                    b.Navigation("Expenses");
                 });
 
             modelBuilder.Entity("backtimetracker.Models.Internet.Purchase", b =>
                 {
                     b.Navigation("Downloads");
-                });
-
-            modelBuilder.Entity("backtimetracker.Models.PettyCashes.PettyCash", b =>
-                {
-                    b.Navigation("Expenses");
                 });
 
             modelBuilder.Entity("backtimetracker.Models.Task.TaskItem", b =>
