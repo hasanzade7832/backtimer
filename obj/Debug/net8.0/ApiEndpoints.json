@@ -779,6 +779,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "YourProjectNamespace.Controllers.Attendance.TimeEntriesController",
+    "Method": "CreateTimeEntry",
+    "RelativePath": "api/TimeEntries",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "YourProjectNamespace.Controllers.Attendance.CreateTimeEntryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProjectNamespace.Controllers.Attendance.TimeEntriesController",
+    "Method": "GetUserTimeEntries",
+    "RelativePath": "api/TimeEntries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProjectNamespace.Controllers.Attendance.TimeEntriesController",
+    "Method": "DeleteTimeEntry",
+    "RelativePath": "api/TimeEntries/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backtimetracker.Controllers.Activities.TimeRecordsController",
     "Method": "Get",
     "RelativePath": "api/TimeRecords",
