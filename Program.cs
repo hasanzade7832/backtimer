@@ -115,22 +115,45 @@ builder.Services.AddSwaggerGen(cfg =>
 //builder.Services.AddCors(options =>
 //{
 //    options.AddPolicy(FrontPolicy, p =>
-//        p.AllowAnyOrigin()
+//        p.WithOrigins("*")
 //         .AllowAnyHeader()
-//         .AllowAnyMethod());
+//         .AllowAnyMethod()
+//         .AllowCredentials() );
 //});
 
-/*────────────────── 7) CORS برای React ────────────*/
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
+
 const string FrontPolicy = "Front";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontPolicy, p =>
-        p.WithOrigins("http://localhost:5173")  // آدرس دقیق فرانت
+        p.WithOrigins(allowedOrigins)
          .AllowAnyHeader()
          .AllowAnyMethod()
-         .AllowCredentials()                     // لازم برای ارسال توکن/کوکی
+         .AllowCredentials()
     );
 });
+
+/*────────────────── 7) CORS برای React ────────────*/
+//const string FrontPolicy = "Front";
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(FrontPolicy, p =>
+//        p.AllowAnyOrigin()  // آدرس دقیق فرانت
+//         .AllowAnyHeader()
+//         .AllowAnyMethod()
+//    );
+//});
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(FrontPolicy, p =>
+//        p.WithOrigins("http://localhost:7070")  // آدرس دقیق فرانت
+//         .AllowAnyHeader()
+//         .AllowAnyMethod()
+//         .AllowCredentials()                     // لازم برای ارسال توکن/کوکی
+//    );
+//});
 
 
 /*────────────────── 8) SignalR ───────────────────*/

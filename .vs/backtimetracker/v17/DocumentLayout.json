@@ -1,38 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\",
+  "WorkspaceRootPath": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\controllers\\egg\\eggcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:controllers\\egg\\eggcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250606195438_AddEggLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250606195438_AddEggLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\najmprog1\\desktop\\time_back_new\\backtimer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\egg\\usereggcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\egg\\usereggcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\egg\\egglogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\egg\\egglogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\egg\\createegglogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\egg\\createegglogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\egg\\egglogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\egg\\egglogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|c:\\users\\asus\\desktop\\timetracker\\back\\models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00788052-E56B-46D7-AAAC-8C30231480E4}|backtimetracker.csproj|solutionrelative:models\\user\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Migrations\\20250607110908_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250607110908_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,114 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250606195438_AddEggLog.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250606195438_AddEggLog.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250606195438_AddEggLog.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Migrations\\20250606195438_AddEggLog.cs",
-              "RelativeToolTip": "Migrations\\20250606195438_AddEggLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:54:38.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\User\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\User\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\User\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\User\\ApplicationUser.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:43:10.378Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwCgAAAA2AAAAAAAAAA==",
+              "Title": "20250607110908_test.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Migrations\\20250607110908_test.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250607110908_test.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Migrations\\20250607110908_test.cs",
+              "RelativeToolTip": "Migrations\\20250607110908_test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:35:32.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EggLogs.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\EggLogs.cs",
-              "RelativeDocumentMoniker": "Models\\Egg\\EggLogs.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\EggLogs.cs",
-              "RelativeToolTip": "Models\\Egg\\EggLogs.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:34:17.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserEggCountDto.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\UserEggCountDto.cs",
-              "RelativeDocumentMoniker": "Models\\Egg\\UserEggCountDto.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\UserEggCountDto.cs",
-              "RelativeToolTip": "Models\\Egg\\UserEggCountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:33:02.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateEggLogDto.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\CreateEggLogDto.cs",
-              "RelativeDocumentMoniker": "Models\\Egg\\CreateEggLogDto.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\CreateEggLogDto.cs",
-              "RelativeToolTip": "Models\\Egg\\CreateEggLogDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:32:45.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EggLogDto.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\EggLogDto.cs",
-              "RelativeDocumentMoniker": "Models\\Egg\\EggLogDto.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Models\\Egg\\EggLogDto.cs",
-              "RelativeToolTip": "Models\\Egg\\EggLogDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:32:31.051Z",
+              "WhenOpened": "2025-06-07T11:09:08.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EggController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Egg\\EggController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Egg\\EggController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\timetracker\\back\\Controllers\\Egg\\EggController.cs",
-              "RelativeToolTip": "Controllers\\Egg\\EggController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAYwI0AAAANAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-07T11:02:41.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Najmprog1\\Desktop\\time_back_new\\backtimer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:31:40.461Z",
+              "WhenOpened": "2025-06-07T09:01:59.674Z",
               "EditorCaption": ""
             }
           ]
