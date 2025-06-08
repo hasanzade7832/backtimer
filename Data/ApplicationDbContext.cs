@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Emit;
+
 using backtimetracker.Models.Activities;
 using backtimetracker.Models.Internet;
 using backtimetracker.Models.PettyCashes;
@@ -12,6 +13,7 @@ using backtimetracker.Models.Egg;           // برای EggLog
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using YourProjectNamespace.Models.Attendance;
 
 namespace backtimetracker.Data
 {
@@ -61,6 +63,9 @@ namespace backtimetracker.Data
         /// </summary>
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<PettyCash> PettyCashes { get; set; }
+
+        public DbSet<TimeEntry> TimeEntries { get; set; }
+
 
         #endregion
 

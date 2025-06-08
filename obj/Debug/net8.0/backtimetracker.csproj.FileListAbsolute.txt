@@ -463,7 +463,6 @@ C:\Users\Najmprog1\Desktop\time_back_new\backtimer\bin\Debug\net8.0\Microsoft.Ex
 C:\Users\Najmprog1\Desktop\time_back_new\backtimer\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\Najmprog1\Desktop\time_back_new\backtimer\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Najmprog1\Desktop\time_back_new\backtimer\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
-C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\backtimetracker.staticwebassets.endpoints.json
 C:\Users\ASUS\Desktop\timetracker\back\bin\Debug\net8.0\backtimetracker.exe
