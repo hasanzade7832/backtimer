@@ -12,7 +12,7 @@ using backtimetracker.Models.User;
 namespace backtimetracker.Controllers.Account
 {
     [ApiController]
-    [Route("api/login")]
+    [Route("login")]
     public class LoginController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;

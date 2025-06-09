@@ -607,22 +607,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "backtimetracker.Controllers.Account.LoginController",
-    "Method": "Login",
-    "RelativePath": "api/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "backtimetracker.Models.Auth.Login",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "backtimetracker.Controllers.PettyCashes.PettyCashController",
     "Method": "GetAllPettyCashes",
     "RelativePath": "api/PettyCash",
@@ -758,22 +742,6 @@
         "Name": "file",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "backtimetracker.Controllers.Account.RegisterController",
-    "Method": "Register",
-    "RelativePath": "api/Register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "backtimetracker.Models.Auth.RegisterDto",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -944,6 +912,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Account.LoginController",
+    "Method": "Login",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "backtimetracker.Models.Auth.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backtimetracker.Controllers.Account.RegisterController",
+    "Method": "Register",
+    "RelativePath": "Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "backtimetracker.Models.Auth.RegisterDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]
