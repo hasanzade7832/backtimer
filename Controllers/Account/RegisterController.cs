@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace backtimetracker.Controllers.Account;
 
 [AllowAnonymous]
-[Route("api/Register")]
+[Route("Register")]
 [ApiController]
 public class RegisterController : ControllerBase
 {
@@ -22,11 +22,13 @@ public class RegisterController : ControllerBase
     public async Task<IActionResult> Register([FromBody] RegisterDto dto)
     {
         if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+        {
+            return BadRequest("ورودی‌های فرم معتبر نیستند.");
+        }
 
         var user = new ApplicationUser
         {
-            UserName = dto.UserName,              // 👈 حالا از dto.UserName استفاده می‌کنیم
+            UserName = dto.UserName,
             FullName = dto.FullName,
             Email = dto.Email,
             PhoneNumber = dto.PhoneNumber,
@@ -36,8 +38,29 @@ public class RegisterController : ControllerBase
         var result = await _userManager.CreateAsync(user, dto.Password);
 
         if (!result.Succeeded)
-            return BadRequest(result.Errors);
+        {
+            var firstError = result.Errors.FirstOrDefault();
+            var message = firstError is not null ? TranslateIdentityError(firstError) : "خطای ناشناخته هنگام ثبت‌نام.";
+            return BadRequest(message);
+        }
 
         return Ok("ثبت‌نام با موفقیت انجام شد");
     }
+
+
+    private string TranslateIdentityError(IdentityError error)
+    {
+        return error.Code switch
+        {
+            "DuplicateUserName" => "این نام کاربری قبلاً ثبت شده است.",
+            "DuplicateEmail" => "این ایمیل قبلاً استفاده شده است.",
+            "PasswordTooShort" => "رمز عبور خیلی کوتاه است.",
+            "PasswordRequiresDigit" => "رمز عبور باید حداقل شامل یک عدد باشد.",
+            "PasswordRequiresUpper" => "رمز عبور باید شامل حداقل یک حرف بزرگ باشد.",
+            "PasswordRequiresLower" => "رمز عبور باید شامل حداقل یک حرف کوچک باشد.",
+            "PasswordRequiresNonAlphanumeric" => "رمز عبور باید شامل حداقل یک کاراکتر خاص باشد.",
+            _ => "خطا: " + error.Description
+        };
+    }
+
 }
